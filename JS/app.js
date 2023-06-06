@@ -108,3 +108,53 @@ do{
 console.log("Variable: " + variable);
 variable--;
 }while (variable > 5)
+
+    
+let Grates1 = [10, 5, 10, 4, 6]
+let Grates2 = [1, 6, 8, 7, 8]
+let Grates3 = [3, 7, 4, 6, 7]
+let Grates4 = [10, 8, 4, 9, 3]
+
+//// Function
+
+function SummationFunction(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum = sum + arr[i]
+    }
+    console.log("Summation = " + sum);
+    // console.log(newVar);
+    return sum
+}
+
+let test = SummationFunction(Grates1) //argumant
+console.log(test); // return
+SummationFunction(Grates2)
+SummationFunction(Grates3)
+SummationFunction(Grates4)
+
+let TotalSum = SummationFunction(Grates1) + SummationFunction(Grates2) + SummationFunction(Grates3) + SummationFunction(Grates4)
+console.log("Totale summation = " + TotalSum);
+
+
+// 2. Second type of functions
+
+const summation1 = function (arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum = sum + arr[i]
+    }
+    return sum
+}
+console.log(summation1(Grates1));
+console.log(summation1(Grates2));
+console.log(summation1(Grates3));
+console.log(summation1(Grates4));
+
+
+// 3. Arrow function
+const Arrow = (param1, param2) => {
+    let calculate = Math.pow(param1, param2)
+    return calculate
+}
+console.log(Arrow(9, 2));
